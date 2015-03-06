@@ -16,10 +16,13 @@ background.fill((100, 100, 255))
 
 screen.blit(background, (0, 0))
 screen.blit(divider,(250,0))
-screen.blit(loadButton,(30,30))
+screen.blit(loadButton,(10,60))
 
 pygame.display.flip()
 
 #loadButton.
 while gameActive:
+    event = pygame.event.wait()
+    if event.type == pygame.QUIT:
+        gameActive=0
     pygame.display.flip()
